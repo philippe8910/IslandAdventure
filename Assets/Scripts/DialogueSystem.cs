@@ -12,6 +12,7 @@ public class DialogueSystem : SingletonService<DialogueSystem>
     public DialogueData dialogueData;
     public AudioSource speakerAudio;
     public CanvasGroup canvasGroup;
+    public Text speakerText;
     public Text dialogueText;
     
     [Header("Value Setting")]
@@ -28,6 +29,8 @@ public class DialogueSystem : SingletonService<DialogueSystem>
         if (speakerAudio == null)
             Debug.LogError(this.name + "Missing Component : " + speakerAudio.GetType().ToString());
         if (dialogueText == null) 
+            Debug.LogError(this.name + "Missing Component : " + dialogueText.GetType().ToString());
+        if (speakerText == null) 
             Debug.LogError(this.name + "Missing Component : " + dialogueText.GetType().ToString());
         if (canvasGroup == null) 
             Debug.LogError(this.name + "Missing Component : " + canvasGroup.GetType().ToString());
@@ -52,6 +55,12 @@ public class DialogueSystem : SingletonService<DialogueSystem>
                 OnDialogComplete();
             }
         }
+    }
+
+    [ContextMenu("Send Test")]
+    public void SendText()
+    {
+        DialogueSystem.instance.Send("DialogueData");
     }
 
     public void Send(DialogueData data)
@@ -88,9 +97,10 @@ public class DialogueSystem : SingletonService<DialogueSystem>
         if (currentDialogueIndex < dialogueData.dialogueEntries.Count)
         {
             DialogueEntry currentEntry = dialogueData.dialogueEntries[currentDialogueIndex];
-            string fullText = currentEntry.speaker + ": " +
-                              currentEntry.context + "\n";
+            string fullText = currentEntry.context + "\n";
+            string speakerTexts = currentEntry.speaker;
 
+            speakerText.text = speakerTexts;
             StartCoroutine(ShowText(fullText));
 
             if (currentEntry.audioClip != null)
