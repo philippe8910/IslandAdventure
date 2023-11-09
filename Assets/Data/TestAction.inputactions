@@ -1,0 +1,34 @@
+{
+    "name": "TestAction",
+    "maps": [
+        {
+            "name": "TestMap",
+            "id": "fdd37227-010f-44f7-bb0a-9bef818e4a56",
+            "actions": [
+                {
+                    "name": "OnSpacePress",
+                    "type": "Button",
+                    "id": "cc0e0c18-f689-4ae8-bd08-41002317589d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "66f095f9-3444-456e-9de7-ed43e8d2a3e6",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnSpacePress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
