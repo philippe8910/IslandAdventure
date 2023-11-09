@@ -14,5 +14,14 @@ public class DialogueEntry
     public string speaker;
     public string context;
     public float waitTime;
+    public AudioEffect audioEffect;
     public AudioClip audioClip;
+}
+
+public enum AudioEffect
+{
+    defaults,
+    surprise,
+    disappointment,
+    happy
 }
