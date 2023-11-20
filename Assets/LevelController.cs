@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 
 // 状态基类
@@ -19,9 +20,12 @@ public class FirstIntroductionState : LevelStateBase
 {
     public FirstIntroductionState(LevelController controller) : base(controller) { }
 
-    public override void EnterState()
+    public async override void EnterState()
     {
-        DialogueSystem.instance.Send("Test_01" , levelController.OnSecIntroductionStateDetected);
+        await Task.Delay(100);
+        Debug.Log("First Start");
+        
+        DialogueSystem.instance.Send("Test_01" , levelController.OnFirstIntroductionStateDialogEndDetected);
     }
 
     public override void UpdateState()
@@ -39,9 +43,31 @@ public class SecIntroductionState : LevelStateBase
 {
     public SecIntroductionState(LevelController controller) : base(controller) {}
     
-    public override void EnterState()
+    public async override void EnterState()
     {
-        DialogueSystem.instance.Send("Test_02" , levelController.OnFirstIntroductionStateDetected);
+        await Task.Delay(100);
+        DialogueSystem.instance.Send("Test_02" , levelController.OnSecIntroductionStateDialogEndDetected);
+    }
+
+    public override void UpdateState()
+    {
+        // FirstIntroduction 状态的更新逻辑
+    }
+
+    public override void ExitState()
+    {
+        
+    }
+}
+
+public class ThirdIntroductionState : LevelStateBase
+{
+    public ThirdIntroductionState(LevelController controller) : base(controller) {}
+    
+    public async override void EnterState()
+    {
+        await Task.Delay(100);
+        DialogueSystem.instance.Send("Test_03" , levelController.OnThirdIntroductionStateDialogEndDetected);
     }
 
     public override void UpdateState()
@@ -58,10 +84,12 @@ public class SecIntroductionState : LevelStateBase
 public class LevelController : MonoBehaviour
 {
     private LevelStateBase currentState;
-    
+
+
     private void Start()
     {
-        SetState(new FirstIntroductionState(this));
+        currentState = new FirstIntroductionState(this);
+        currentState.EnterState();
     }
 
     private void Update()
@@ -76,14 +104,30 @@ public class LevelController : MonoBehaviour
         currentState.EnterState();
     }
 
-    public void OnFirstIntroductionStateDetected()
+    public void OnFirstIntroductionStateDialogEndDetected()
     {
-        Debug.Log("End");
+        Debug.Log("First End");
         SetState(new SecIntroductionState(this));
     }
     
-    public void OnSecIntroductionStateDetected()
+    public void OnSecIntroductionStateDialogEndDetected()
     {
-        Debug.Log("End");
+        Debug.Log("Sec End");
+        var selectPanel = GameObject.FindWithTag("SelectPanel").GetComponent<CanvasGroup>();
+        selectPanel.alpha = 1;
+    }
+
+    public void SelectCurrentAnswer()
+    {
+        Debug.Log("Current Answer");
+        var selectPanel = GameObject.FindWithTag("SelectPanel").GetComponent<CanvasGroup>();
+        selectPanel.alpha = 0;
+
+        SetState(new ThirdIntroductionState(this));
+    }
+
+    public void OnThirdIntroductionStateDialogEndDetected()
+    {
+        
     }
 }

@@ -9,6 +9,6 @@ public class SystemLoader : MonoBehaviour
     private void Awake()
     {
         SceneManager.LoadSceneAsync("SystemScene", LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync("InterationScenes", LoadSceneMode.Additive);
+        //SceneManager.LoadSceneAsync("InterationScenes", LoadSceneMode.Additive);
     }
 }
