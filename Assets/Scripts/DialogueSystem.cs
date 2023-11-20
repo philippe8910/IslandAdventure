@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -14,18 +16,19 @@ public class DialogueSystem : SingletonService<DialogueSystem>
     public CanvasGroup canvasGroup;
     public Text speakerText;
     public Text dialogueText;
-    
-    [Header("Value Setting")]
-    [Space]
-    [SerializeField] private int currentDialogueIndex = 0;
+
+    [Header("Value Setting")] [Space] 
+    [SerializeField] private bool facingPlayer;
     [SerializeField] private bool isDisplayingText = false;
+    [SerializeField] private int currentDialogueIndex = 0;
+
+    private Transform playerTransform;
+    private Action onDialogEnd;
 
     void Start()
     {
         TryGetComponent<CanvasGroup>(out canvasGroup);
         
-        if (dialogueData == null)
-            Debug.LogError(this.name + "Missing Component : " + dialogueData.GetType().ToString());
         if (speakerAudio == null)
             Debug.LogError(this.name + "Missing Component : " + speakerAudio.GetType().ToString());
         if (dialogueText == null) 
@@ -36,6 +39,7 @@ public class DialogueSystem : SingletonService<DialogueSystem>
             Debug.LogError(this.name + "Missing Component : " + canvasGroup.GetType().ToString());
         
         currentDialogueIndex = 0;
+        playerTransform = FindObjectOfType<XROrigin>().transform;
         //DisplayNextDialogue(); 
     }
 
@@ -55,28 +59,41 @@ public class DialogueSystem : SingletonService<DialogueSystem>
                 OnDialogComplete();
             }
         }
+
+        if (facingPlayer)
+        {
+            transform.localScale = new Vector3(-Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            transform.LookAt(new Vector3(playerTransform.position.x , transform.position.y , playerTransform.position.z));
+        }
     }
 
     [ContextMenu("Send Test")]
     public void SendText()
     {
-        DialogueSystem.instance.Send("DialogueData");
+        DialogueSystem.instance.Send("Test_01" , delegate { Debug.Log("The End"); });
     }
 
-    public void Send(DialogueData data)
+    public void ResetPosition(float duration , Vector3 worldSpace)
+    {
+        transform.DOMove(worldSpace, duration);
+    }
+
+    public void Send(DialogueData data , Action action)
     {
         dialogueData = data;
+        onDialogEnd = action;
         
         DisplayNextDialogue();
     }
     
-    public void Send(string dataName)
+    public void Send(string dataName , Action action)
     {
         var path = "DialogData/" + dataName;
         var data = Resources.Load<DialogueData>(path);
 
         if (data != null)
         {
+            onDialogEnd = action;
             dialogueData = data;
         }
         
@@ -85,8 +102,11 @@ public class DialogueSystem : SingletonService<DialogueSystem>
 
     private void OnDialogComplete()
     {
-        currentDialogueIndex = 0;
+        onDialogEnd?.Invoke();
+        
+        onDialogEnd = null;
         dialogueData = null;
+        currentDialogueIndex = 0;
         canvasGroup.alpha = 0;
     }
 
@@ -117,7 +137,7 @@ public class DialogueSystem : SingletonService<DialogueSystem>
         for (int i = 0; i < text.Length; i++)
         {
             dialogueText.text += text[i];
-            yield return new WaitForSeconds(0.05f); // 控制文本逐字显示速度
+            yield return new WaitForSeconds(0.01f); // 控制文本逐字显示速度
         }
         isDisplayingText = false;
     }

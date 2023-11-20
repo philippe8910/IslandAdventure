@@ -9,19 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8b869826c1ccf649a44da6b96a8ab89, type: 3}
-  m_Name: DialogueData
+  m_Script: {fileID: 11500000, guid: 6f6e88738fe7bbb4395c6ee7842c5d87, type: 3}
+  m_Name: SoundData
   m_EditorClassIdentifier: 
-  dialogueEntries:
-  - speaker: 123
-    context: 213131231
-    waitTime: 0
+  soundEntries:
+  - id: 
     audioClip: {fileID: 0}
-  - speaker: 123
-    context: 123131312
-    waitTime: 0
+  - id: 
     audioClip: {fileID: 0}
-  - speaker: 123
-    context: 123131231
-    waitTime: 0
+  - id: 
+    audioClip: {fileID: 0}
+  - id: 
     audioClip: {fileID: 0}
