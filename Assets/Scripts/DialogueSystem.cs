@@ -207,13 +207,13 @@ public class DialogueSystem : SingletonService<DialogueSystem>
                 currentSprite =  characterPack.currentPack[2];
                 break;
             case Speaker.Missionary:
-                currentSprite =  characterPack.currentPack[2];
-                break;
-            case Speaker.Player:
                 currentSprite =  characterPack.currentPack[3];
                 break;
-            case Speaker.Narration:
+            case Speaker.Player:
                 currentSprite =  characterPack.currentPack[4];
+                break;
+            case Speaker.Narration:
+                currentSprite =  characterPack.currentPack[5];
                 break;
         }
 

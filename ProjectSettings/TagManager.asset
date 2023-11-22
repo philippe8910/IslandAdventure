@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - SelectPanel
+  - PlayerEyes
+  - SelectPanel2
+  - SelectPanel3
   layers:
   - Default
   - TransparentFX
