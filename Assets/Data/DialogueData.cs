@@ -11,11 +11,21 @@ public class DialogueData : ScriptableObject
 [System.Serializable]
 public class DialogueEntry
 {
-    public string speaker;
     public string context;
     public float waitTime;
     public AudioEffect audioEffect;
     public AudioClip audioClip;
+    public Speaker currentSpeaker = Speaker.Narration;
+}
+
+public enum Speaker
+{
+    Sword,
+    Rifle,
+    Merchant,
+    Missionary,
+    Player,
+    Narration
 }
 
 public enum AudioEffect
