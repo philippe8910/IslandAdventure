@@ -81,6 +81,71 @@ public class ThirdIntroductionState : LevelStateBase
     }
 }
 
+public class FirstLeaderIntroductionState : LevelStateBase
+{
+    public FirstLeaderIntroductionState(LevelController controller) : base(controller) { }
+
+    public async override void EnterState()
+    {
+        await Task.Delay(100);
+        Debug.Log("First Start");
+        
+        DialogueSystem.instance.Send("Character_2" , levelController.OnFirstLeaderIntroductionStateDialogEndDetected);
+    }
+
+    public override void UpdateState()
+    {
+        // FirstIntroduction 状态的更新逻辑
+    }
+
+    public override void ExitState()
+    {
+        
+    }
+}
+
+public class SecLeaderIntroductionState : LevelStateBase
+{
+    public SecLeaderIntroductionState(LevelController controller) : base(controller) {}
+    
+    public async override void EnterState()
+    {
+        await Task.Delay(100);
+        DialogueSystem.instance.Send("Character_2_Introduction_1" , levelController.OnSecLeaderIntroductionStateDialogEndDetected);
+    }
+
+    public override void UpdateState()
+    {
+        // FirstIntroduction 状态的更新逻辑
+    }
+
+    public override void ExitState()
+    {
+        
+    }
+}
+
+public class ThirdLeaderIntroductionState : LevelStateBase
+{
+    public ThirdLeaderIntroductionState(LevelController controller) : base(controller) {}
+    
+    public async override void EnterState()
+    {
+        await Task.Delay(100);
+        DialogueSystem.instance.Send("Character_2_Introduction_2" , levelController.OnThirdLeaderIntroductionStateDialogEndDetected);
+    }
+
+    public override void UpdateState()
+    {
+        // FirstIntroduction 状态的更新逻辑
+    }
+
+    public override void ExitState()
+    {
+        
+    }
+}
+
 public class FirstMissionaryIntroductionState : LevelStateBase
 {
     public FirstMissionaryIntroductionState(LevelController controller) : base(controller) { }
@@ -90,7 +155,7 @@ public class FirstMissionaryIntroductionState : LevelStateBase
         await Task.Delay(100);
         Debug.Log("First Start");
         
-        DialogueSystem.instance.Send("Character_2" , levelController.OnFirstMissionaryIntroductionStateDialogEndDetected);
+        DialogueSystem.instance.Send("Character_3" , levelController.OnFirstMissionaryIntroductionStateDialogEndDetected);
     }
 
     public override void UpdateState()
@@ -206,12 +271,19 @@ public class LevelController : MonoBehaviour
         var player = GameObject.FindWithTag("Player");
         var playerPoint = GameObject.FindWithTag("Point_2").transform.position;
 
-        player.transform.position = playerPoint;
         
-        SetState(new FirstMissionaryIntroductionState(this));
+        
+        BlackEffectSystem.instance.onFadeInExit = delegate
+        {
+            player.transform.position = playerPoint;
+            BlackEffectSystem.instance.SetFadeOut();
+        };
+        BlackEffectSystem.instance.SetFadeIn();
+        
+        SetState(new FirstLeaderIntroductionState(this));
     }
     
-    public void OnFirstMissionaryIntroductionStateDialogEndDetected()
+    public void OnFirstLeaderIntroductionStateDialogEndDetected()
     {
         Debug.Log("First End");
         var selectPanel = GameObject.FindWithTag("SelectPanel2").GetComponent<CanvasGroup>();
@@ -230,19 +302,84 @@ public class LevelController : MonoBehaviour
         selectPanel.blocksRaycasts = false;
         selectPanel.alpha = 0;
 
-        SetState(new SecMissionaryIntroductionState(this));
+        SetState(new SecLeaderIntroductionState(this));
     }
     
-    public void OnSecMissionaryIntroductionStateDialogEndDetected()
+    public void OnSecLeaderIntroductionStateDialogEndDetected()
     {
         Debug.Log("Sec End");
         
-        SetState(new ThirdMissionaryIntroductionState(this));
+        SetState(new ThirdLeaderIntroductionState(this));
     }
     
+    public void OnThirdLeaderIntroductionStateDialogEndDetected()
+    {
+        Debug.Log("Third End");
+        var player = GameObject.FindWithTag("Player");
+        var playerPoint = GameObject.FindWithTag("Point_3").transform.position;
+
+        
+        
+        BlackEffectSystem.instance.onFadeInExit = delegate
+        {
+            player.transform.position = playerPoint;
+            BlackEffectSystem.instance.SetFadeOut();
+        };
+        BlackEffectSystem.instance.SetFadeIn();
+        
+        SetState(new FirstLeaderIntroductionState(this));
+        
+    }
+
+    public void OnFirstMissionaryIntroductionStateDialogEndDetected()
+    {
+        Debug.Log("First End");
+        var selectPanel = GameObject.FindWithTag("SelectPanel3").GetComponent<CanvasGroup>();
+        
+        selectPanel.interactable = true;
+        selectPanel.blocksRaycasts = true;
+        selectPanel.alpha = 1;
+    }
+    
+    public void SelectThirdCurrentAnswer()
+    {
+        Debug.Log("Current Answer");
+        var selectPanel = GameObject.FindWithTag("SelectPanel3").GetComponent<CanvasGroup>();
+        
+        selectPanel.interactable = false;
+        selectPanel.blocksRaycasts = false;
+        selectPanel.alpha = 0;
+
+        SetState(new SecMissionaryIntroductionState(this));
+    }
+
+    public void OnSecMissionaryIntroductionStateDialogEndDetected()
+    {
+        Debug.Log("Current Answer");
+        var selectPanel = GameObject.FindWithTag("SelectPanel3").GetComponent<CanvasGroup>();
+        
+        selectPanel.interactable = false;
+        selectPanel.blocksRaycasts = false;
+        selectPanel.alpha = 0;
+
+        SetState(new ThirdMissionaryIntroductionState(this));
+    }
+
     public void OnThirdMissionaryIntroductionStateDialogEndDetected()
     {
         Debug.Log("Third End");
+        var player = GameObject.FindWithTag("Player");
+        var playerPoint = GameObject.FindWithTag("Point_3").transform.position;
+
         
+        
+        BlackEffectSystem.instance.onFadeInExit = delegate
+        {
+            player.transform.position = playerPoint;
+            BlackEffectSystem.instance.SetFadeOut();
+        };
+        BlackEffectSystem.instance.SetFadeIn();
+        
+        SetState(new FirstLeaderIntroductionState(this));
     }
 }

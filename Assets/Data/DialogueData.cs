@@ -23,6 +23,7 @@ public enum Speaker
     Sword,
     Rifle,
     Merchant,
+    Leader,
     Missionary,
     Player,
     Narration
