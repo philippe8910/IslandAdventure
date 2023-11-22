@@ -203,6 +203,10 @@ public class LevelController : MonoBehaviour
     public void OnThirdIntroductionStateDialogEndDetected()
     {
         Debug.Log("Third End");
+        var player = GameObject.FindWithTag("Player");
+        var playerPoint = GameObject.FindWithTag("Point_2").transform.position;
+
+        player.transform.position = playerPoint;
         
         SetState(new FirstMissionaryIntroductionState(this));
     }

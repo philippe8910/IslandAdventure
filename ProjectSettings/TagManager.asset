@@ -8,6 +8,9 @@ TagManager:
   - PlayerEyes
   - SelectPanel2
   - SelectPanel3
+  - Point_1
+  - Point_2
+  - Point_3
   layers:
   - Default
   - TransparentFX
