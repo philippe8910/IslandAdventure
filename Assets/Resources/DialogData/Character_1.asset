@@ -12,4 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b869826c1ccf649a44da6b96a8ab89, type: 3}
   m_Name: Character_1
   m_EditorClassIdentifier: 
-  dialogueEntries: []
+  dialogueEntries:
+  - context: "\u563F\uFF01\u6211\u662F\u500B\u5728\u53F0\u5357\u5B89\u5E73\u6DF7\u5F97\u9817\u4E0D\u932F\u7684\u6CBF\u6D77\u8001\u677F\uFF0C\u624B\u4E0A\u6709\u5BB6\u5C0F\u5546\u865F\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 2
+  - context: "\u6211\u5011\u5E97\u92EA\u5C31\u5728\u6D77\u908A\uFF0C\u90A3\u5EA7\u7D05\u78DA\u5EFA\u7684\u8001\u5C4B\u53EF\u662F\u898B\u8B49\u4E86\u4E0D\u5C11\u6B77\u53F2\u5462"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 2
+  - context: "\u6211\u5011\u4E3B\u653B\u53F0\u7063\u7279\u7522\uFF0C\u8DDF\u65E5\u672C\u554A\u5565\u7684\u4E5F\u6709\u597D\u591A\u751F\u610F\u5F80\u4F86"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 2
+  - context: "\u96D6\u7136\u6642\u5C40\u52D5\u76EA\uFF0C\u4F46\u6211\u5011\u4E00\u76F4\u5728\u52AA\u529B\u7D93\u71DF\uFF0C\u7D66\u5BA2\u6236\u63D0\u4F9B\u6700\u597D\u7684\u8CA8\u54C1"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 2
+  - context: "\u4F86\u6211\u5011\u5E97\u901B\u901B\u5427\uFF0C\u611F\u53D7\u4E00\u4E0B\u90A3\u500B\u5E74\u4EE3\u7279\u6709\u7684\u98A8\u60C5\uFF01"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 2
