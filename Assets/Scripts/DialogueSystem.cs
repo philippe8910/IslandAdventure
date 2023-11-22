@@ -63,7 +63,7 @@ public class DialogueSystem : SingletonService<DialogueSystem>
             else
             {
                 // 对话结束
-                // 在这里添加你的对话结束逻辑
+                // 在这里添加对话结束逻辑
                 OnDialogComplete();
             }
         }

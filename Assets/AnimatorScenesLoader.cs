@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class AnimatorScenesLoader : MonoBehaviour
 {
         private Animator animator;
         public string nextSceneName;
+
+        public UnityEvent OnAnimatorExit;
     
         void Start()
         {
@@ -25,5 +28,7 @@ public class AnimatorScenesLoader : MonoBehaviour
         {
             // 切換場景
             SceneManager.LoadScene(nextSceneName);
+            
+            OnAnimatorExit?.Invoke();
         }
 }
