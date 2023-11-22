@@ -11,6 +11,7 @@ TagManager:
   - Point_1
   - Point_2
   - Point_3
+  - System
   layers:
   - Default
   - TransparentFX

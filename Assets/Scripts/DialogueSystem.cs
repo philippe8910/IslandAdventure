@@ -60,7 +60,7 @@ public class DialogueSystem : SingletonService<DialogueSystem>
         InputDevice device = InputDevices.GetDeviceAtXRNode(controllerNode);
         device.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
         
-        if (triggerValue > 0.5f && !isDisplayingText && dialogueData != null)
+        if (((triggerValue > 0.5f) || Keyboard.current.spaceKey.wasPressedThisFrame) && !isDisplayingText && dialogueData != null)
         {
             if (currentDialogueIndex < dialogueData.dialogueEntries.Count)
             {

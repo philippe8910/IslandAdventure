@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 // 状态基类
@@ -217,6 +218,8 @@ public class LevelController : MonoBehaviour
 
     public Animator character_1, character_2 , character_3;
 
+    public GameObject theEnd;
+
 
     private void Start()
     {
@@ -271,9 +274,13 @@ public class LevelController : MonoBehaviour
     {
         Debug.Log("Third End");
         var player = GameObject.FindWithTag("Player");
+        var XRPlayer = GameObject.FindObjectOfType<XROrigin>();
+        var SystemAchor = GameObject.FindWithTag("System");
         var playerPoint = GameObject.FindWithTag("Point_2").transform.position;
 
-        player.transform.Rotate(0,90,0);
+        //player.transform.Rotate(0,90,0);
+        XRPlayer.transform.Rotate(0,90,0);
+        SystemAchor.transform.Rotate(0,90,0);
         
         BlackEffectSystem.instance.onFadeInExit = delegate
         {
@@ -321,9 +328,14 @@ public class LevelController : MonoBehaviour
     {
         Debug.Log("Third End");
         var player = GameObject.FindWithTag("Player");
+        var XRPlayer = GameObject.FindObjectOfType<XROrigin>();
+        var SystemAchor = GameObject.FindWithTag("System");
         var playerPoint = GameObject.FindWithTag("Point_3").transform.position;
 
-        player.transform.Rotate(0,-90,0);
+        //player.transform.Rotate(0,90,0);
+        XRPlayer.transform.Rotate(0,-90,0);
+        SystemAchor.transform.Rotate(0,-90,0);
+        
         
         BlackEffectSystem.instance.onFadeInExit = delegate
         {
@@ -372,19 +384,6 @@ public class LevelController : MonoBehaviour
 
     public void OnThirdMissionaryIntroductionStateDialogEndDetected()
     {
-        Debug.Log("Third End");
-        var player = GameObject.FindWithTag("Player");
-        var playerPoint = GameObject.FindWithTag("Point_3").transform.position;
-
-        
-        
-        BlackEffectSystem.instance.onFadeInExit = delegate
-        {
-            player.transform.position = playerPoint;
-            BlackEffectSystem.instance.SetFadeOut();
-        };
-        BlackEffectSystem.instance.SetFadeIn();
-        
-        SetState(new FirstLeaderIntroductionState(this));
+        theEnd.SetActive(true);
     }
 }
