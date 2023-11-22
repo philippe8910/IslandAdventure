@@ -3,7 +3,37 @@ guid: a8e252de33c258f43b64f48a810204fd
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box001Mat
+    second: {fileID: 2100000, guid: 06d016192b8a59547be8d91ab41fecce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box207Mat
+    second: {fileID: 2100000, guid: 3280f76761c08de468aec6376aec82ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box208Mat
+    second: {fileID: 2100000, guid: f8dbb25b3bf0cae439ec96b8f659382c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tube002Mat
+    second: {fileID: 2100000, guid: c468307493ca9904d867d2286d55e323, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tube007Mat
+    second: {fileID: 2100000, guid: 8792aff750209a54699ba6efed5d71bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tube008Mat
+    second: {fileID: 2100000, guid: acad65206937ef7459aef2918c42bfb9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
