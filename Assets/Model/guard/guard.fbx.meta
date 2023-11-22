@@ -3,7 +3,22 @@ guid: 1c04bac3e51e1874ca55270367e63608
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: guard_body
+    second: {fileID: 2100000, guid: 5c624a4ac110fae468e7039d60a23217, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: guard_cloth
+    second: {fileID: 2100000, guid: 132471541062218498bf75c08f37cf05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: guard_head
+    second: {fileID: 2100000, guid: cf2c92836cf74334f927035f85a6ad35, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
