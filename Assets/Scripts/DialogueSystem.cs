@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.XR;
+using CommonUsages = UnityEngine.XR.CommonUsages;
+using InputDevice = UnityEngine.XR.InputDevice;
 
 public class DialogueSystem : SingletonService<DialogueSystem>
 {
@@ -20,6 +22,8 @@ public class DialogueSystem : SingletonService<DialogueSystem>
     public Text dialogueText;
 
     public Image speakerImage;
+
+    public XRNode controllerNode;
 
     [Header("Value Setting")] [Space] 
     [SerializeField] private bool facingPlayer;
@@ -53,7 +57,10 @@ public class DialogueSystem : SingletonService<DialogueSystem>
 
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && !isDisplayingText && dialogueData != null)
+        InputDevice device = InputDevices.GetDeviceAtXRNode(controllerNode);
+        device.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
+        
+        if (triggerValue > 0.5f && !isDisplayingText && dialogueData != null)
         {
             if (currentDialogueIndex < dialogueData.dialogueEntries.Count)
             {
@@ -206,14 +213,17 @@ public class DialogueSystem : SingletonService<DialogueSystem>
             case Speaker.Merchant:
                 currentSprite =  characterPack.currentPack[2];
                 break;
-            case Speaker.Missionary:
+            case Speaker.Leader:
                 currentSprite =  characterPack.currentPack[3];
                 break;
-            case Speaker.Player:
+            case Speaker.Missionary:
                 currentSprite =  characterPack.currentPack[4];
                 break;
-            case Speaker.Narration:
+            case Speaker.Player:
                 currentSprite =  characterPack.currentPack[5];
+                break;
+            case Speaker.Narration:
+                currentSprite =  characterPack.currentPack[6];
                 break;
         }
 

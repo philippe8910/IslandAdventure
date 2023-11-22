@@ -27,8 +27,11 @@ public class AnimatorScenesLoader : MonoBehaviour
         void OnAnimationComplete()
         {
             // 切換場景
-            SceneManager.LoadScene(nextSceneName);
-            
             OnAnimatorExit?.Invoke();
+        }
+
+        public void ChangeScene()
+        {
+            SceneManager.LoadScene(nextSceneName);
         }
 }

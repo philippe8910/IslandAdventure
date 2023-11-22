@@ -176,7 +176,7 @@ public class SecMissionaryIntroductionState : LevelStateBase
     public async override void EnterState()
     {
         await Task.Delay(100);
-        DialogueSystem.instance.Send("Character_2_Introduction_1" , levelController.OnSecMissionaryIntroductionStateDialogEndDetected);
+        DialogueSystem.instance.Send("Character_3_Introduction_1" , levelController.OnSecMissionaryIntroductionStateDialogEndDetected);
     }
 
     public override void UpdateState()
@@ -197,7 +197,7 @@ public class ThirdMissionaryIntroductionState : LevelStateBase
     public async override void EnterState()
     {
         await Task.Delay(100);
-        DialogueSystem.instance.Send("Character_2_Introduction_2" , levelController.OnThirdMissionaryIntroductionStateDialogEndDetected);
+        DialogueSystem.instance.Send("Character_3_Introduction_2" , levelController.OnThirdMissionaryIntroductionStateDialogEndDetected);
     }
 
     public override void UpdateState()
@@ -214,6 +214,8 @@ public class ThirdMissionaryIntroductionState : LevelStateBase
 public class LevelController : MonoBehaviour
 {
     private LevelStateBase currentState;
+
+    public Animator character_1, character_2 , character_3;
 
 
     private void Start()
@@ -271,7 +273,7 @@ public class LevelController : MonoBehaviour
         var player = GameObject.FindWithTag("Player");
         var playerPoint = GameObject.FindWithTag("Point_2").transform.position;
 
-        
+        player.transform.Rotate(0,90,0);
         
         BlackEffectSystem.instance.onFadeInExit = delegate
         {
@@ -279,6 +281,9 @@ public class LevelController : MonoBehaviour
             BlackEffectSystem.instance.SetFadeOut();
         };
         BlackEffectSystem.instance.SetFadeIn();
+        
+        character_1.Play("Happy Idle");
+        character_2.Play("Explane_HandDirect");
         
         SetState(new FirstLeaderIntroductionState(this));
     }
@@ -318,7 +323,7 @@ public class LevelController : MonoBehaviour
         var player = GameObject.FindWithTag("Player");
         var playerPoint = GameObject.FindWithTag("Point_3").transform.position;
 
-        
+        player.transform.Rotate(0,-90,0);
         
         BlackEffectSystem.instance.onFadeInExit = delegate
         {
@@ -327,7 +332,7 @@ public class LevelController : MonoBehaviour
         };
         BlackEffectSystem.instance.SetFadeIn();
         
-        SetState(new FirstLeaderIntroductionState(this));
+        SetState(new FirstMissionaryIntroductionState(this));
         
     }
 

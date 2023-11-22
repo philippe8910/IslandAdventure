@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Introduction_1_Scene.unity
+    guid: 8f4bafa1560acfd4ca0d6638bd1532fb
+  - enabled: 1
     path: Assets/Scenes/ZheTestScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InterationScenes.unity
     guid: 4e2c29d615490d14cb6e8db411a927eb
-  - enabled: 1
-    path: Assets/Scenes/Introduction_1_Scene.unity
-    guid: 8f4bafa1560acfd4ca0d6638bd1532fb
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c3b1edad3f2b3a847a83718b19efd5db, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 30fcb40c7217bb74d83948c1c71ead9f, type: 2}

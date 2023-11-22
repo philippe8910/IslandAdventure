@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b869826c1ccf649a44da6b96a8ab89, type: 3}
+  m_Name: Character_3_Introduction_2
+  m_EditorClassIdentifier: 
+  dialogueEntries:
+  - context: "\u57281635\u5E74\uFF0C\u6211\u8EAB\u8655\u6587\u6731\u6BBF\uFF0C\u9019\u662F\u4E00\u5EA7\u6B77\u53F2\u539A\u91CD\u7684\u5730\u65B9\uFF0C\u4E5F\u662F\u6211\u50B3\u6559\u4E8B\u696D\u7684\u64DA\u9EDE\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 4
+  - context: "\u8377\u862D\u7D71\u6CBB\u4E0B\u7684\u81FA\u7063\uFF0C\u6211\u662F\u4E00\u4F4D\u50B3\u6559\u58EB\u5C24\u7D10\u65AF\uFF0C\u52AA\u529B\u5C07\u57FA\u7763\u6559\u7684\u6559\u7FA9\u5E36\u5165\u9019\u7247\u571F\u5730\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 4
+  - context: "\u6211\u53C3\u8207\u4E86\u8ECD\u4E8B\u884C\u52D5\uFF0C\u8A66\u5716\u5728\u539F\u4F4F\u6C11\u8207\u8377\u862D\u4EBA\u4E4B\u9593\u5EFA\u7ACB\u67D0\u7A2E\u5E73\u8861\uFF0C\u5316\u89E3\u6587\u5316\u5DEE\u7570\u6240\u5E36\u4F86\u7684\u77DB\u76FE\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 4
+  - context: "\u66FE\u7D93\u5728\u5929\u82B1\u8972\u64CA\u4E2D\u898B\u8B49\u4E86\u9EBB\u8C46\u793E\u7684\u82E6\u96E3\uFF0C\u9019\u4F7F\u5F97\u8377\u862D\u4EBA\u8207\u539F\u4F4F\u6C11\u4E4B\u9593\u7684\u95DC\u4FC2\u66F4\u52A0\u8907\u96DC\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 4
+  - context: "\u5728\u4E00\u5834\u6230\u5F79\u4E2D\uFF0C\u6211\u6210\u529F\u8AAA\u670D\u4E86\u65B0\u6E2F\u793E\u7684\u539F\u4F4F\u6C11\u6230\u58EB\uFF0C\u5171\u540C\u5C0D\u6297\u5171\u540C\u7684\u6575\u4EBA\uFF0C\u9019\u6210\u70BA\u6B77\u53F2\u4E2D\u7684\u4E00\u9801\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 4
+  - context: "\u6211\u5728\u8377\u862D\u4EBA\u7D71\u6CBB\u7684\u74B0\u5883\u4E2D\uFF0C\u52AA\u529B\u4FC3\u9032\u5B97\u6559\u7684\u50B3\u64AD\uFF0C\u540C\u6642\u4E5F\u8207\u7576\u5730\u6587\u5316\u9032\u884C\u4EA4\u6D41\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 4
+  - context: "\u5C24\u7D10\u65AF\u7684\u540D\u5B57\u6216\u8A31\u5728\u9019\u7247\u571F\u5730\u4E0A\u6D41\u50B3\uFF0C\u6210\u70BA\u5B97\u6559\u6D3B\u52D5\u8207\u6B77\u53F2\u4E8B\u4EF6\u7684\u4EE3\u8868\u4E4B\u4E00\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 4
+  - context: "\u6211\u7684\u4E00\u751F\u6216\u8A31\u5145\u6EFF\u4E86\u4FE1\u4EF0\u3001\u50B3\u6559\u4EE5\u53CA\u8207\u7576\u5730\u793E\u7FA4\u5171\u540C\u751F\u6D3B\u7684\u9EDE\u6EF4\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 4
+  - context: "\u5728\u65B7\u982D\u53F0\u4E0A\uFF0C\u6211\u8207\u9019\u7247\u571F\u5730\u7684\u6B77\u53F2\u4EA4\u7E54\u5728\u4E00\u8D77\uFF0C\u898B\u8B49\u8457\u6642\u5149\u7684\u8B8A\u9077\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 4
+  - context: "\u96D6\u7136\u6211\u53EA\u662F\u9019\u500B\u6642\u4EE3\u7684\u4E00\u500B\u5FAE\u5C0F\u5B58\u5728\uFF0C\u4F46\u5728\u9019\u7247\u571F\u5730\u4E0A\u7559\u4E0B\u4E86\u52AA\u529B\u7684\u8DB3\u8DE1\uFF0C\u6210\u70BA\u6B77\u53F2\u4E2D\u7684\u4E00\u90E8\u5206\u3002"
+    waitTime: 0
+    audioEffect: 0
+    audioClip: {fileID: 0}
+    currentSpeaker: 4
