@@ -17,6 +17,8 @@ public class DialogueSystem : SingletonService<DialogueSystem>
     public DialogueCharacterPack characterPack;
     public AudioSource speakerAudio;
     public CanvasGroup canvasGroup;
+
+    public bool isLock = false;
     
     public Text speakerText;
     public Text dialogueText;
@@ -60,7 +62,7 @@ public class DialogueSystem : SingletonService<DialogueSystem>
         InputDevice device = InputDevices.GetDeviceAtXRNode(controllerNode);
         device.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
         
-        if (((triggerValue > 0.5f) || Keyboard.current.spaceKey.wasPressedThisFrame) && !isDisplayingText && dialogueData != null)
+        if (((triggerValue > 0.5f) || Keyboard.current.spaceKey.wasPressedThisFrame) && !isDisplayingText && dialogueData != null && !isLock)
         {
             if (currentDialogueIndex < dialogueData.dialogueEntries.Count)
             {

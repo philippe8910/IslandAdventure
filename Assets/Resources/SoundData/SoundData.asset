@@ -13,11 +13,27 @@ MonoBehaviour:
   m_Name: SoundData
   m_EditorClassIdentifier: 
   soundEntries:
-  - id: 
-    audioClip: {fileID: 0}
-  - id: 
-    audioClip: {fileID: 0}
-  - id: 
-    audioClip: {fileID: 0}
-  - id: 
-    audioClip: {fileID: 0}
+  - id: Claping
+    audioClip: {fileID: 8300000, guid: 523e74183528aae47814723c367bc1cc, type: 3}
+  - id: Click
+    audioClip: {fileID: 8300000, guid: 213586e8488fbd149a12a9c5d163add3, type: 3}
+  - id: GameRoom
+    audioClip: {fileID: 8300000, guid: 675a5792785edde41ade3c7d5d09aba7, type: 3}
+  - id: StartRoom
+    audioClip: {fileID: 8300000, guid: 1282901437a6ed54ebf85d59f4291f7b, type: 3}
+  - id: Pick
+    audioClip: {fileID: 8300000, guid: 0d238db913de00b478c97135861ed9c2, type: 3}
+  - id: Pleasure
+    audioClip: {fileID: 8300000, guid: 6e5408b0ebb1f7b4fa7e371cd7c7a1c5, type: 3}
+  - id: Shinng_1
+    audioClip: {fileID: 8300000, guid: 7e2595c97cbb89944af239ea04687039, type: 3}
+  - id: Shinng_2
+    audioClip: {fileID: 8300000, guid: 5e4f216deccb6b44f8fcb9988da8eac6, type: 3}
+  - id: "\u5606\u6C231"
+    audioClip: {fileID: 8300000, guid: ca285fd0c6dcda6478e6cc459b0329fa, type: 3}
+  - id: "\u5606\u6C232"
+    audioClip: {fileID: 8300000, guid: d3e44dc04ac76ea4f88ad1495d094099, type: 3}
+  - id: "\u5606\u6C233"
+    audioClip: {fileID: 8300000, guid: 4204890e486d1d04e95a4a2f2e235d78, type: 3}
+  - id: "\u5606\u6C234"
+    audioClip: {fileID: 8300000, guid: c864a14aab01dc143864757238b5f094, type: 3}

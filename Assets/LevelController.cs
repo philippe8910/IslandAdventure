@@ -281,11 +281,19 @@ public class LevelController : MonoBehaviour
         //player.transform.Rotate(0,90,0);
         XRPlayer.transform.Rotate(0,90,0);
         SystemAchor.transform.Rotate(0,90,0);
+
+        DialogueSystem.instance.isLock = true;
         
         BlackEffectSystem.instance.onFadeInExit = delegate
         {
             player.transform.position = playerPoint;
+            
             BlackEffectSystem.instance.SetFadeOut();
+            DialogueSystem.instance.isLock = false;
+            
+            Debug.Log("Here is call back");
+            
+            BlackEffectSystem.instance.onFadeInExit = delegate {  };
         };
         BlackEffectSystem.instance.SetFadeIn();
         
@@ -335,12 +343,20 @@ public class LevelController : MonoBehaviour
         //player.transform.Rotate(0,90,0);
         XRPlayer.transform.Rotate(0,-90,0);
         SystemAchor.transform.Rotate(0,-90,0);
-        
+
+        BlackEffectSystem.instance.onFadeInExit = null;
+        DialogueSystem.instance.isLock = true;
         
         BlackEffectSystem.instance.onFadeInExit = delegate
         {
             player.transform.position = playerPoint;
+            
             BlackEffectSystem.instance.SetFadeOut();
+            DialogueSystem.instance.isLock = false;
+            
+            Debug.Log("Black Effect Last End");
+            
+            BlackEffectSystem.instance.onFadeInExit = delegate {  };
         };
         BlackEffectSystem.instance.SetFadeIn();
         

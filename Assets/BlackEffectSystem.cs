@@ -24,15 +24,19 @@ public class BlackEffectSystem : SingletonService<BlackEffectSystem>
         material.SetFloat("_SurfaceType", isTransparent ? 1 : 0);
         
         // 使用DOTween动画来改变Material的透明度
-        material.DOColor(new Color(0f, 0f, 0f, 0f), duration)
+        var dotTweenerCore = material.DOColor(new Color(0f, 0f, 0f, 0f), duration)
             .OnComplete(OnCompleteCallback); // 动画完成时调用回调函数
+
+        DOTween.Kill(dotTweenerCore);
     }
 
     public void SetFadeIn()
     {
         // 使用DOTween动画来改变Material的透明度
-        material.DOColor(new Color(0f, 0f, 0f, 1f), duration)
+        var dotTweenerCore =  material.DOColor(new Color(0f, 0f, 0f, 1f), duration)
             .OnComplete(OnCompleteCallback); // 动画完成时调用回调函数
+
+        DOTween.Kill(dotTweenerCore);
     }
 
     public void OnCompleteCallback()
