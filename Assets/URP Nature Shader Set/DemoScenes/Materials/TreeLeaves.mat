@@ -55,7 +55,7 @@ Material:
     m_Floats:
     - Vector1_A27A3D7E: 32
     - Vector1_CC2ACFFC: 0.355
-    - Vector1_E74BFB7C: 0.341
+    - Vector1_E74BFB7C: 0.358
     - _QueueControl: 0
     - _QueueOffset: 0
     - _WindDensity: 0.1
