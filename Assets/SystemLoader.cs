@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class SystemLoader : MonoBehaviour
 {
-    private void Awake()
-    {
-        SceneManager.LoadSceneAsync("SystemScene", LoadSceneMode.Additive);
-        //SceneManager.LoadSceneAsync("InterationScenes", LoadSceneMode.Additive);
-    }
+    int num0 = 0; 
+
+    float num1 = 0.0f;
+
+    bool check = false;
+
+    string text = "";
 }
