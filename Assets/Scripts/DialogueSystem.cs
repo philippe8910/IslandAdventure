@@ -195,7 +195,7 @@ public class DialogueSystem : SingletonService<DialogueSystem>
                 return "旁白";
                 break;
             default:
-                return "沒這人";
+                return "宋克";
                 break;
         }
     }
