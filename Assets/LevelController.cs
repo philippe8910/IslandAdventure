@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // 状态基类
 public abstract class LevelStateBase
@@ -360,6 +361,9 @@ public class LevelController : MonoBehaviour
         };
         BlackEffectSystem.instance.SetFadeIn();
         
+        character_2.Play("Happy Idle");
+        character_3.Play("Explane_HandDirect");
+        
         SetState(new FirstMissionaryIntroductionState(this));
         
     }
@@ -401,5 +405,10 @@ public class LevelController : MonoBehaviour
     public void OnThirdMissionaryIntroductionStateDialogEndDetected()
     {
         theEnd.SetActive(true);
+    }
+
+    public void ReloadScenes()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
