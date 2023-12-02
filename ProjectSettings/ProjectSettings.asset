@@ -135,11 +135,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: 11400000, guid: c3b1edad3f2b3a847a83718b19efd5db, type: 2}
-  - {fileID: -7485021895555193160, guid: d84ae3bcffbb66d41a184e5b086c3577, type: 2}
-  - {fileID: 11400000, guid: 30fcb40c7217bb74d83948c1c71ead9f, type: 2}
-  - {fileID: 3378358344132091642, guid: 42b66784758207e49b7f7683f67236ad, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -587,7 +583,9 @@ PlayerSettings:
   switchPlayerConnectionEnabled: 1
   switchUseNewStyleFilepaths: 0
   switchUseMicroSleepForYield: 1
+  switchEnableRamDiskSupport: 0
   switchMicroSleepForYieldTime: 25
+  switchRamDiskSpaceSize: 12
   ps4NPAgeRating: 12
   ps4NPTitleSecret: 
   ps4NPTrophyPackPath: 
