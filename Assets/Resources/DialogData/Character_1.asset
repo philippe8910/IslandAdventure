@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character_1
   m_EditorClassIdentifier: 
   dialogueEntries:
-  - context: "\u563F\uFF01\u6211\u662F\u500B\u5728\u53F0\u5357\u5B89\u5E73\u6DF7\u5F97\u9817\u4E0D\u932F\u7684\u6CBF\u6D77\u8001\u677F\uFF0C\u624B\u4E0A\u6709\u5BB6\u5C0F\u5546\u865F"
+  - context: "\u6211\u7684\u540D\u5B57\u662F\u6FF1\u7530\u5F4C\u5175\u885B\uFF0C\u66FE\u57281628\u5E74\u8207\u5176\u4ED6\u5546\u4EBA\u4E00\u540C\u8981\u6C42\u96E2\u958B\u53F0\u7063\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 606144aceae69b84d92e9e3c0c06ec51, type: 3}
