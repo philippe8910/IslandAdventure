@@ -17,19 +17,19 @@ MonoBehaviour:
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 4903f340f3d411141b909baf7062db56, type: 3}
-    currentSpeaker: 4
+    currentSpeaker: 3
   - context: "\u6211\u7684\u540D\u5B57\u53EB\u5C24\u7D10\u65AF\uFF0C\u6216\u8A31\u8207\u67D0\u7A2E\u5B97\u6559\u6216\u6559\u6D3E\u6709\u95DC\u806F\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: bfed4b3c73e68b84182d962902091821, type: 3}
-    currentSpeaker: 4
+    currentSpeaker: 3
   - context: "\u6211\u53C3\u8207\u4E861635\u5E74\u7684\u8ECD\u4E8B\u884C\u52D5\uFF0C\u6216\u8A31\u662F\u5728\u4E00\u5834\u8907\u96DC\u7684\u6B77\u53F2\u4E8B\u4EF6\u4E2D\u767C\u63EE\u4F5C\u7528\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: fa8c5c8a24429aa498118f3b8a2de757, type: 3}
-    currentSpeaker: 4
+    currentSpeaker: 3
   - context: "\u5728\u90A3\u500B\u6642\u4EE3\uFF0C\u6211\u7684\u884C\u52D5\u4F3C\u4E4E\u5F71\u97FF\u4E86\u539F\u4F4F\u6C11\u548C\u8377\u862D\u4EBA\u4E4B\u9593\u7684\u76F8\u8655\u95DC\u4FC2\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 72c4e35b74f3a1c4b8fece2cbf899dea, type: 3}
-    currentSpeaker: 4
+    currentSpeaker: 3

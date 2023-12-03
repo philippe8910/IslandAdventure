@@ -54,6 +54,8 @@ public class DialogueSystem : SingletonService<DialogueSystem>
         
         currentDialogueIndex = 0;
         playerTransform = FindObjectOfType<XROrigin>().transform;
+
+        Debug.Log("Run Start");
         //DisplayNextDialogue(); 
     }
 
@@ -67,7 +69,9 @@ public class DialogueSystem : SingletonService<DialogueSystem>
             if (currentDialogueIndex < dialogueData.dialogueEntries.Count)
             {
                 DisplayNextDialogue();
-                currentDialogueIndex++;
+                ++currentDialogueIndex;
+                
+                Debug.Log("Space");
             }
             else
             {
@@ -129,25 +133,27 @@ public class DialogueSystem : SingletonService<DialogueSystem>
 
     private void DisplayNextDialogue()
     {
+        // 將增加 currentDialogueIndex 的部分移到這裡
+        currentDialogueIndex++;
+
         canvasGroup.alpha = 1;
-        
-        if (currentDialogueIndex < dialogueData.dialogueEntries.Count)
+
+        if (currentDialogueIndex <= dialogueData.dialogueEntries.Count)
         {
-            DialogueEntry currentEntry = dialogueData.dialogueEntries[currentDialogueIndex];
+            DialogueEntry currentEntry = dialogueData.dialogueEntries[currentDialogueIndex - 1];
             string fullText = currentEntry.context + "\n";
             string speakerTexts = GetSpeakerText(currentEntry.currentSpeaker);
 
             speakerText.text = speakerTexts;
-            
+
             SetSpeakerImage(currentEntry.currentSpeaker);
-            
+
             StartCoroutine(ShowText(fullText));
 
             if (currentEntry.audioClip != null)
             {
                 PlayAudio(currentEntry.audioClip);
             }
-            
         }
     }
 
