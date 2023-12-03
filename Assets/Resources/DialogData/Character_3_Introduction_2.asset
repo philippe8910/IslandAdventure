@@ -17,59 +17,59 @@ MonoBehaviour:
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 5c390cd60f1e0d446b278c8a4f5fa9e2, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u5211\u5834\u7684\u6545\u4E8B\u5C31\u50CF\u53E4\u8001\u7684\u7F88\u7D46\uFF0C\u7262\u7262\u5730\u7E8F\u7E5E\u5728\u9019\u7247\u571F\u5730\u4E0A\uFF0C\u4E0D\u80AF\u653E\u624B\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: b92606f387bf3e54f9e3af71c3505e62, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u90A3\u6642\uFF0C\u6211\u5011\u884C\u5211\u8005\u96D6\u7136\u662F\u751F\u8005\uFF0C\u4F46\u5FC3\u9748\u65E9\u5DF2\u6C89\u6D78\u5728\u6B7B\u4EA1\u7684\u6C1B\u570D\u4E4B\u4E2D\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 4e92a27110cfc9f44bf229abfcd497e8, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 2
   - context: "\u8D70\u9032\u53E4\u5821\u7684\u6DF1\u8655\uFF0C\u90A3\u4E9B\u65B7\u7F6A\u7684\u5F71\u50CF\u5F77\u5F7F\u9084\u5728\u89D2\u843D\u4E2D\u6084\u6084\u55E4\u7B11\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: dd5ba127b28d87740bb0889513b9ad1f, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u6211\u7684\u624B\u66FE\u7D93\u57F7\u884C\u904E\u7121\u6578\u6B21\u7684\u7D5E\u5211\uFF0C\u7D72\u6BEB\u4E0D\u70BA\u6240\u52D5\uFF0C\u4F46\u5FC3\u9748\u537B\u65E9\u5DF2\u88AB\u9019\u6B98\u9177\u7684\u6B77\u53F2\u6240\u523B\u5283\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 90f91dde0de51954080e333211e00dd1, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u5211\u5834\u4E0D\u50C5\u662F\u4E00\u500B\u5BE6\u9AD4\u7684\u7A7A\u9593\uFF0C\u66F4\u662F\u4E00\u6BB5\u7121\u6CD5\u62B9\u6EC5\u7684\u8A18\u61B6\uFF0C\u6DF1\u6DF1\u70D9\u5370\u5728\u9019\u7247\u571F\u5730\u7684\u9748\u9B42\u4E2D\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 87b2044c4412f2d4db80e2ad78cf20c9, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u6BCF\u4E00\u6B21\u5211\u5834\u7684\u9580\u5431\u5431\u4F5C\u97FF\uFF0C\u90FD\u5B9B\u5982\u662F\u6B7B\u795E\u7684\u4F4E\u8A9E\uFF0C\u5411\u6211\u5011\u5BA3\u544A\u751F\u6B7B\u7684\u4EA4\u66FF\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 9d5a7fdece30f5c49a838e6a32d35004, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u7D5E\u5211\u53F0\u4E0A\u7684\u6094\u7F6A\u8005\uFF0C\u4ED6\u5011\u7684\u6545\u4E8B\u5728\u9019\u7247\u571F\u5730\u4E0A\u5316\u6210\u4E86\u4E00\u9053\u9053\u96E3\u4EE5\u78E8\u6EC5\u7684\u70D9\u5370\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 9d5a7fdece30f5c49a838e6a32d35004, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u5982\u4ECA\uFF0C\u53E4\u5821\u5DF2\u7D93\u6539\u982D\u63DB\u9762\uFF0C\u6210\u70BA\u4E86\u6B77\u53F2\u7684\u898B\u8B49\u8005\uFF0C\u4F46\u5211\u5834\u7684\u9670\u5F71\u4ECD\u5728\u591C\u665A\u4E2D\u8513\u5EF6\uFF0C\u4EE4\u4EBA\u5FC3\u751F\u754F\u61FC\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 1e0d766dcf2a53e4cbbd8dac0d78cada, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u6211\u662F\u9019\u7247\u571F\u5730\u4E0A\u7684\u4E00\u500B\u904E\u5BA2\uFF0C\u4F46\u6211\u6DF1\u77E5\u5211\u5834\u7684\u6B77\u53F2\u7121\u6CD5\u5FD8\u61F7\uFF0C\u5B83\u662F\u9019\u7247\u571F\u5730\u7684\u4E00\u90E8\u5206\uFF0C\u7121\u6CD5\u62B9\u6EC5\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: c3bdab297528f954da66682acdd10abe, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u8D70\u904E\u5211\u5834\u7684\u6BCF\u4E00\u6B65\uFF0C\u4EFF\u5F7F\u90FD\u5728\u8E0F\u4E0A\u4E00\u6BB5\u6C89\u75DB\u800C\u6C89\u91CD\u7684\u6B77\u53F2\u9577\u5F81\uFF0C\u6642\u9593\u7121\u6CD5\u62B9\u53BB\u7684\u75D5\u8DE1\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 5c390cd60f1e0d446b278c8a4f5fa9e2, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u5982\u4ECA\uFF0C\u53E4\u5821\u6210\u70BA\u4E86\u4EBA\u5011\u773C\u4E2D\u7684\u666F\u9EDE\uFF0C\u4F46\u5211\u5834\u7684\u56DE\u61B6\u4ECD\u5728\u89D2\u843D\u4E2D\u8E81\u52D5\uFF0C\u63D0\u9192\u8457\u6211\u5011\u90A3\u6BB5\u9ED1\u6697\u6B72\u6708\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: d4964cab0122a064e9aeece2991facf4, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4

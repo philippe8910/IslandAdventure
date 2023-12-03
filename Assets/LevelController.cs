@@ -280,8 +280,8 @@ public class LevelController : MonoBehaviour
         var playerPoint = GameObject.FindWithTag("Point_2").transform.position;
 
         //player.transform.Rotate(0,90,0);
-        XRPlayer.transform.Rotate(0,90,0);
-        SystemAchor.transform.Rotate(0,90,0);
+        XRPlayer.transform.Rotate(0,-90,0);
+        SystemAchor.transform.Rotate(0,-90,0);
 
         DialogueSystem.instance.isLock = true;
         
@@ -342,8 +342,8 @@ public class LevelController : MonoBehaviour
         var playerPoint = GameObject.FindWithTag("Point_3").transform.position;
 
         //player.transform.Rotate(0,90,0);
-        XRPlayer.transform.Rotate(0,-90,0);
-        SystemAchor.transform.Rotate(0,-90,0);
+        XRPlayer.transform.Rotate(0,0,0);
+        SystemAchor.transform.Rotate(0,0,0);
 
         BlackEffectSystem.instance.onFadeInExit = null;
         DialogueSystem.instance.isLock = true;
