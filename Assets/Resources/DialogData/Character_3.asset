@@ -17,7 +17,7 @@ MonoBehaviour:
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: d451f92b6759c4f4cb7f399d058362a8, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u6211\u624B\u4E2D\u63E1\u6709\u751F\u6B7B\u724C\uFF0C\u70BA\u7F6A\u4EBA\u9001\u4E0A\u6700\u5F8C\u4E00\u7A0B\u3002"
     waitTime: 0
     audioEffect: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: d06f0954b0ee48b4992a38f79dc75ef7, type: 3}
-    currentSpeaker: 3
+    currentSpeaker: 4
   - context: "\u4F60\u8A8D\u70BA\u54EA\u4E00\u5F35\u5716\u7247\u6703\u8DDF\u6211\u6709\u6240\u95DC\u9023?"
     waitTime: 0
     audioEffect: 0

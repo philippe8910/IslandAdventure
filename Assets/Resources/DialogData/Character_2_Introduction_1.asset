@@ -37,12 +37,12 @@ MonoBehaviour:
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 7d56ebc4a3305f0438d46ef4e25de013, type: 3}
-    currentSpeaker: 4
+    currentSpeaker: 3
   - context: "\u9019\u6B21\u6210\u529F\u7684\u62DC\u8A2A\u4FC3\u6210\u4E86\u65B0\u6E2F\u793E\u65CF\u4EBA\u56DE\u8A2A\u5927\u54E1\u57CE\u5821\uFF0C\u6211\u4EE515\u5339\u82B1\u5E03\u5411\u4ED6\u5011\u8CFC\u5F97\u571F\u5730\uFF0C\u9019\u7247\u571F\u5730\u5F8C\u4F86\u88AB\u547D\u540D\u70BA\u300C\u666E\u7F85\u6C11\u906E\u300D\uFF0C\u4EE5\u7D00\u5FF5\u5C3C\u5FB7\u862D\u4E03\u7701\u806F\u7701\u806F\u76DF\u3002"
     waitTime: 0
     audioEffect: 0
     audioClip: {fileID: 8300000, guid: 48c9619e95e78734088d1d32cd53e624, type: 3}
-    currentSpeaker: 4
+    currentSpeaker: 3
   - context: "\u6211\u7684\u9818\u5C0E\u548C\u5916\u4EA4\u624B\u8155\u70BA\u8377\u862D\u6B96\u6C11\u5730\u5728\u53F0\u7063\u7684\u5EFA\u8A2D\u5960\u5B9A\u4E86\u5805\u5BE6\u57FA\u790E\u3002"
     waitTime: 0
     audioEffect: 0
