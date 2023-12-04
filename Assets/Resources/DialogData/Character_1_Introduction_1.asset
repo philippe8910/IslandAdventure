@@ -13,48 +13,43 @@ MonoBehaviour:
   m_Name: Character_1_Introduction_1
   m_EditorClassIdentifier: 
   dialogueEntries:
-  - context: "\u5594\uFF0C\u4F60\u597D\u554A\uFF01\u6211\u662F\u9019\u7247\u571F\u5730\u4E0A\u7684\u4E00\u4F4D\u5728\u5730\u5546\u4EBA"
+  - context: "\u6211\u5011\u6D3B\u8E8D\u5728\u65E5\u6CBB\u6642\u671F\u7684\u5B89\u5E73\u6E2F\u3002\u9019\u88E1\u7684\u6E2F\u53E3\u751F\u610F\u771F\u662F\u71B1\u9B27\u975E\u51E1\uFF0C\u6211\u5011\u9019\u4E9B\u5546\u4EBA\u5929\u5929\u5FD9\u5F97\u5718\u5718\u8F49\u3002"
     waitTime: 0
     audioEffect: 0
-    audioClip: {fileID: 0}
-    currentSpeaker: 2
-  - context: "\u6D3B\u8E8D\u5728\u65E5\u6CBB\u6642\u671F\u7684\u5B89\u5E73\u6E2F\u3002\u9019\u88E1\u7684\u6E2F\u53E3\u751F\u610F\u771F\u662F\u71B1\u9B27\u975E\u51E1\uFF0C\u6211\u5011\u9019\u4E9B\u5546\u4EBA\u5929\u5929\u5FD9\u5F97\u5718\u5718\u8F49\u3002"
-    waitTime: 0
-    audioEffect: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 8642e4840602ab14dbeb2fa92bbc12ea, type: 3}
     currentSpeaker: 2
   - context: "\u9019\u4E9B\u9E7F\u76AE\u53EF\u4E0D\u662F\u96A8\u4FBF\u627E\u5F97\u5230\u7684\uFF0C\u5F97\u82B1\u4E0D\u5C11\u5FC3\u601D\u548C\u6280\u5DE7\u624D\u80FD\u8655\u7406\u6210\u4E0A\u597D\u7684\u5546\u54C1\u3002"
     waitTime: 0
     audioEffect: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 1a78ce31cb607e9439385feecae37663, type: 3}
     currentSpeaker: 2
   - context: "\u9084\u6709\u7518\u8517\uFF0C\u54CE\u5440\uFF0C\u90A3\u7C21\u76F4\u662F\u6211\u5011\u7684\u5BF6\u85CF\u554A\uFF01"
     waitTime: 0
     audioEffect: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 31f7c784d66ac0047a87dece7df00d8c, type: 3}
     currentSpeaker: 2
   - context: "\u751C\u751C\u7684\u7CD6\u5206\uFF0C\u9019\u4E00\u7247\u7684\u7518\u8517\u53EF\u662F\u5929\u7136\u7684\u751C\u871C\u6E90\u6CC9\u3002\u6211\u5011\u9019\u5152\u7684\u7518\u8517\u88FD\u7CD6\u5EE0\u6BCF\u5929\u90FD\u5192\u7740\u767D\u7159\uFF0C\u628A\u751C\u7F8E\u7684\u7CD6\u5206\u63D0\u7149\u51FA\u4F86\u3002"
     waitTime: 0
     audioEffect: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: ce15ba4fe2d0e0b4fab1e553aa37a4bf, type: 3}
     currentSpeaker: 2
   - context: "\u9019\u4E0D\u50C5\u50C5\u662F\u8CBF\u6613\uFF0C\u66F4\u662F\u6211\u5011\u9019\u7247\u571F\u5730\u7684\u751F\u547D\u529B\uFF0C\u5E36\u52D5\u4E86\u9019\u7247\u571F\u5730\u7684\u7D93\u6FDF\u8207\u767C\u5C55\u3002"
     waitTime: 0
     audioEffect: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: bd2c0b87a01fd9e439a5a48928fdbf7d, type: 3}
     currentSpeaker: 2
   - context: "\u7576\u6642\u7684\u6E2F\u53E3\u751F\u610F\u771F\u662F\u4E94\u82B1\u516B\u9580\uFF0C\u5404\u7A2E\u4EBA\u5404\u7A2E\u7269\uFF0C\u7D61\u7E79\u4E0D\u7D55\u3002"
     waitTime: 0
     audioEffect: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 4e4f301080c9034469c26af271e7585b, type: 3}
     currentSpeaker: 2
   - context: "\u9019\u7247\u571F\u5730\u5145\u6EFF\u8457\u591A\u5143\u6587\u5316\u7684\u98A8\u60C5\uFF0C\u6BCF\u5929\u90FD\u662F\u4E00\u5834\u65B0\u5947\u7684\u5192\u96AA\u3002"
     waitTime: 0
     audioEffect: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: c50aae8c8dc2bcf449d6af9c58387746, type: 3}
     currentSpeaker: 2
   - context: "\u9019\u6BB5\u5728\u5730\u5546\u4EBA\u7684\u751F\u6D3B\uFF0C\u7C21\u76F4\u662F\u71B1\u8840\u6CB8\u9A30\uFF0C\u6BCF\u4E00\u5929\u90FD\u662F\u4E00\u500B\u65B0\u7684\u6311\u6230\uFF01"
     waitTime: 0
     audioEffect: 0
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: f21b653bc3c5a704c9a0c27b8ce9c00f, type: 3}
     currentSpeaker: 2

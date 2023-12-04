@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // 状态基类
 public abstract class LevelStateBase
@@ -279,8 +280,8 @@ public class LevelController : MonoBehaviour
         var playerPoint = GameObject.FindWithTag("Point_2").transform.position;
 
         //player.transform.Rotate(0,90,0);
-        XRPlayer.transform.Rotate(0,90,0);
-        SystemAchor.transform.Rotate(0,90,0);
+        XRPlayer.transform.Rotate(0,-90,0);
+        SystemAchor.transform.Rotate(0,-90,0);
 
         DialogueSystem.instance.isLock = true;
         
@@ -341,8 +342,8 @@ public class LevelController : MonoBehaviour
         var playerPoint = GameObject.FindWithTag("Point_3").transform.position;
 
         //player.transform.Rotate(0,90,0);
-        XRPlayer.transform.Rotate(0,-90,0);
-        SystemAchor.transform.Rotate(0,-90,0);
+        XRPlayer.transform.Rotate(0,0,0);
+        SystemAchor.transform.Rotate(0,0,0);
 
         BlackEffectSystem.instance.onFadeInExit = null;
         DialogueSystem.instance.isLock = true;
@@ -359,6 +360,9 @@ public class LevelController : MonoBehaviour
             BlackEffectSystem.instance.onFadeInExit = delegate {  };
         };
         BlackEffectSystem.instance.SetFadeIn();
+        
+        character_2.Play("Happy Idle");
+        character_3.Play("Explane_HandDirect");
         
         SetState(new FirstMissionaryIntroductionState(this));
         
@@ -401,5 +405,10 @@ public class LevelController : MonoBehaviour
     public void OnThirdMissionaryIntroductionStateDialogEndDetected()
     {
         theEnd.SetActive(true);
+    }
+
+    public void ReloadScenes()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

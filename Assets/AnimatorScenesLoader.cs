@@ -32,6 +32,6 @@ public class AnimatorScenesLoader : MonoBehaviour
 
         public void ChangeScene()
         {
-            SceneManager.LoadScene(nextSceneName);
+            SceneManager.LoadScene(1);
         }
 }
